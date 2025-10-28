@@ -1,0 +1,11 @@
+@import "navbar.css";
+@import "buttons.css";
+html a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+}
+body,html {
+    font-family: system-ui;
+    overflow-x: hidden;
+}

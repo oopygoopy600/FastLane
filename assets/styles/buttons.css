@@ -1,0 +1,7 @@
+.navbutton {
+    position: relative;
+    border-radius: 30px;
+    height: 50px;
+    top: 5px;
+    width: 10rem;
+}
