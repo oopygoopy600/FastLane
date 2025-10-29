@@ -1,18 +1,23 @@
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 2rem;
-    z-index: 99;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2.5rem;
+  z-index: 99;
+  position: relative;
 }
-.navbarlogo{
-    display: flex;
+.navbarlogo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
 }
 .navlinks {
     display: flex;
-    gap: 2rem;
-    width: 5rem;
+    gap: 2.5rem;
 }
 .navlinks li {
     list-style: none;
@@ -45,6 +50,9 @@
     width: 250px;
 
 }
+.weblogo {
+    max-width: 4rem;
+}
 .menu-toggle {
     display: none;
 }
@@ -53,37 +61,33 @@
     font-size: 24px;
     cursor: pointer;
 }
-@media only screen and (max-width: 1024px){
-    .navbar {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-    }
-    .weblogo{
-        display: none;
-    }
-    .Fast {
-        font-size: 40px;
-    }
-    .Lane {
-        font-size: 40px;
-    }
+.navlinks a {
+  position: relative;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
 
-    .navlinks {
-      display: none;
-    }
-    .navbutton {
-        display: none;
-    }
-    .menu-btns {
-      display: flex;
-    }
-    .navlinks {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .menu-toggle:checked~.navlinks {
-      display: flex;
-    }
+/* Hover scale */
+.navlinks li:hover {
+  transform: scale(1.1);
+}
+
+/* Animated underline */
+.navlinks a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #28a745; /* Green (match your logo) */
+  transition: width 0.3s ease;
+}
+
+/* When hovered, underline grows */
+.navlinks a:hover::after {
+  width: 100%;
 }

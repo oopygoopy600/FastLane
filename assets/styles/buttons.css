@@ -1,3 +1,8 @@
+.btn-primary {
+    width: 15rem;
+    height: 50px;
+    border-radius: 30px;
+}
 .navbutton {
     position: relative;
     border-radius: 30px;
