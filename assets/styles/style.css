@@ -1,7 +1,7 @@
 @import "navbar.css";
 @import "buttons.css";
 @import "herobanner.css";
-
+@import "queue.css";
 * {
     margin: 0;
     padding: 0;

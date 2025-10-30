@@ -1,3 +1,6 @@
+#hero-section {
+    overflow: hidden;
+}
 .hero-banner {
     display: flex;
     flex-direction: column;
@@ -11,4 +14,32 @@
     font-weight: 450;
     max-width: 550px;
     color: #289759;
+}
+#bg-video {
+    object-fit: cover;
+    height: 450px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.hero-background{
+    background-color: #289759;
+    background-color: rgba(40, 151, 89, 0.5);
+    height: 450px;
+}
+.hero-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 45%;
+    padding: 5rem;
+    gap: 2rem;
+}
+.hero-content h1 {
+    font-size: 60px;
+    color: white;
+}
+.hero-content span {
+    font-size: 20px;
+    color: white;
 }

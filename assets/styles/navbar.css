@@ -12,7 +12,6 @@
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: 0.4rem;
   text-decoration: none;
 }
 .navlinks {
