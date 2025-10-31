@@ -1,0 +1,28 @@
+.text-left{
+    max-width: 650px;
+    font-size: 50px;
+}
+
+.text-right{
+    max-width: 650px;
+    color: #333;
+}
+
+.image-wrapper1{
+    background: url(../images/logo.1.PNG);
+    height: 35px;
+    width: 130px;
+}
+.image-wrapper2{
+    background: url(../images/logo.2.PNG);
+    height: 35px;
+    width: 130px;
+}
+.image-wrapper3{
+    background: url(../images/logo.3.PNG);
+    height: 30px;
+    width: 130px;
+}
+.section-logo{
+    margin-top: 60px;
+}
