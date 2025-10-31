@@ -9,6 +9,7 @@
     left: 50%;
     align-items: center;
     transform: translate(-50%, -50%);
+    margin-top: 50px;
 }
 .input-tab {
     border: 2px solid rgb(255, 249, 249);

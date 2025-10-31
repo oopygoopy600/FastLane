@@ -1,2 +1,0 @@
-# FastLane
-Platform Technology project
