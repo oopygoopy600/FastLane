@@ -1,3 +1,41 @@
 .section3{
+    display: flex;
+    height: auto;
+    width: 100%;
     background-color: #1FA65A;
+    padding: 7rem;
+    gap: 5rem;
+}
+.services-section {
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    gap: 3rem;
+}
+.hero-section3 {
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    gap: 2rem;
+}
+.hero-section3 h1{
+    color: white;
+    font-size: 50px;
+}
+.hero-section3 span {
+    color: white;
+    font-weight: 400;
+}
+.services-section h1{
+    font-size: 25px;
+    color: white;
+}
+.services-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.services-item span {
+    color: white;
+    font-weight: 400;
 }

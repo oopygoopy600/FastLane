@@ -3,7 +3,7 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">    
     <link rel="icon" href="./assets/images/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
                 <li><a href="#">Services</a></li>
             </ul>
                 <a href="#" class="navbarlogo">
-                <img src="../assets/images/logo.png" alt="logo" class="weblogo" style="height: 4rem;">
+                <img src="./assets/images/logo.png" alt="logo" class="weblogo" style="height: 4rem;">
                 <span class="Fast h1" style="color: #289759;">Fast</span><span class="Lane h1" style="color: rgb(33, 33, 33);">Lane</span>
                 </a>
             <a href="#"><button class="btn btn-success navbutton">Contact Us</button></a>
@@ -30,27 +30,39 @@
                 <div class="bg-circle2"></div>
     </header>
     <main id="main">
-        <form>
+        <form action = "queuedata/queueSummary.php" method = "POST">
         <div class="input-tab" id="Info-input">
             <div class="input-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Entet your Name" required>
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name ="fullname" placeholder="Entet your Name" required>
             </div>
             <div class="input-group">
                 <label for="mobile">Phone Number</label>
-                <input type="tel" id="mobile" placeholder="Entet your Phone Number" required>
+                <input type="tel" id="mobile" name="mobile" placeholder="Entet your Phone Number" required>
             </div>
             <div class="input-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="Entet your Email" required>
+                <input type="email" id="email" name="email" placeholder="Entet your Email" required>
+            </div>
+            <div class= "input-group">
+                <label for="appointment">Choose an Appointment</label>
+                <select name="appointment" id="appointment" name="appointment" required>
+                    <option value="LTO student license">LTO student license</option>
+                    <option value="Facial Surgeon">Facial Surgeon</option>
+                    <option value="Brgy Clearance">Brgy Clearance</option>
+                </select>
             </div>
             <div class="input-group">
-                <label for="Message">Message</label>
-                <textarea name="Message" id="Message" placeholder="Message"></textarea>
+                <label for="date">Set a Date</label>
+                <input type="date" id="date" name="date" required>
             </div>
-            <a href="#"><button class="btn btn-primary btn-submit" type="submit">Appoint</button></a>
-        </div>
+            <div class= "input-group">
+                <label for="time">Set Time</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+            <button class="btn btn-primary btn-submit" type="submit">Appoint</button>
         </form>
     </main>
+    
 </body>
 </html>

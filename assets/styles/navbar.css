@@ -90,3 +90,12 @@
 .navlinks a:hover::after {
   width: 100%;
 }
+@media only screen and (max-width: 768px) {
+    .navlinks {
+      display: none;
+    }
+    .navbutton {
+      display: none !important;
+    }
+
+  }
