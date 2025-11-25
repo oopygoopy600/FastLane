@@ -34,35 +34,48 @@
                 <div class="bg-circle1"></div>
                 <div class="bg-circle2"></div>
     </header>
+    <?php
+session_start(); // start session to store user data temporarily
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Save form data in session
+    $_SESSION['appointment'] = [
+        'fullname' => htmlspecialchars($_POST['fullname']),
+        'mobile' => htmlspecialchars($_POST['mobile']),
+        'email' => htmlspecialchars($_POST['email']),
+        'appointment' => htmlspecialchars($_POST['appointment']),
+        'date' => htmlspecialchars($_POST['date']),
+        'time' => htmlspecialchars($_POST['time'])
+    ];
+} elseif (!isset($_SESSION['appointment'])) {
+    header("Location: ../index.php");
+    exit;
+}
+
+$data = $_SESSION['appointment'];
+?>
     <main>
-        <?php
-        //var_dump($_SERVER["REQUEST_METHOD"]);
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $full_Name = htmlspecialchars($_POST["fullname"]);
-                $tel_No = htmlspecialchars($_POST["mobile"]);
-                $user_Email = htmlspecialchars($_POST["email"]);
-                $appointment_Option = htmlspecialchars($_POST["appointment"]);
-                $user_Date = htmlspecialchars($_POST["date"]);
-                $user_Time = htmlspecialchars($_POST["time"]);
-            }
-        ?>
-        <section class="container mt-5 p-4 summary-box shadow rounded-4" style="max-width: 650px; background: #ffffffcc;">
-<h2 class="text-center mb-4 fw-bold" style="color:#0c6c36;">Summary of Appointment</h2>
+<section class="container mt-5 p-4 summary-box shadow rounded-4" style="max-width: 650px; background: #ffffffcc;">
+    <h2 class="text-center mb-4 fw-bold" style="color:#0c6c36;">Summary of Appointment</h2>
 
+    <div class="summary-group mb-2"><strong>Full Name:</strong> <?php echo $data['fullname']; ?></div>
+    <div class="summary-group mb-2"><strong>Phone Number:</strong> <?php echo $data['mobile']; ?></div>
+    <div class="summary-group mb-2"><strong>Email:</strong> <?php echo $data['email']; ?></div>
+    <div class="summary-group mb-2"><strong>Appointment For:</strong> <?php echo $data['appointment']; ?></div>
+    <div class="summary-group mb-2"><strong>Date:</strong> <?php echo $data['date']; ?></div>
+    <div class="summary-group mb-2"><strong>Time:</strong> <?php echo $data['time']; ?></div>
 
-<div class="summary-group mb-2"><strong>Full Name:</strong> <?php echo $full_Name ?? ''; ?></div>
-<div class="summary-group mb-2"><strong>Phone Number:</strong> <?php echo $tel_No ?? ''; ?></div>
-<div class="summary-group mb-2"><strong>Email:</strong> <?php echo $user_Email ?? ''; ?></div>
-<div class="summary-group mb-2"><strong>Appointment For:</strong> <?php echo $appointment_Option ?? ''; ?></div>
-<div class="summary-group mb-2"><strong>Date:</strong> <?php echo $user_Date ?? ''; ?></div>
-<div class="summary-group mb-2"><strong>Time:</strong> <?php echo $user_Time ?? ''; ?></div>
+    <div class="text-center mt-4">
+        <!-- Back button -->
+        <a href="../goQueue.html" class="btn btn-secondary rounded-5 px-4 py-2">Go Back</a>
 
-<div class="text-center mt-4">
-<a href="../goQueue.php" class="btn btn-secondary rounded-5 px-4 py-2">Go Back</a>
-<a href="../pages/thankyou.html" class="btn btn-success rounded-5 px-4 py-2 ms-2">Confirm</a>
-</div>
+        <!-- Confirm button -->
+        <form action="confirmAppointment.php" method="POST" style="display:inline-block;">
+            <button type="submit" class="btn btn-success rounded-5 px-4 py-2 ms-2">Confirm</button>
+        </form>
+    </div>
 </section>
-    </main>
+</main>
     <footer>
 
     </footer>
