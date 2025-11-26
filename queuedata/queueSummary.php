@@ -66,10 +66,7 @@ $data = $_SESSION['appointment'];
     <div class="summary-group mb-2"><strong>Time:</strong> <?php echo $data['time']; ?></div>
 
     <div class="text-center mt-4">
-        <!-- Back button -->
         <a href="../goQueue.html" class="btn btn-secondary rounded-5 px-4 py-2">Go Back</a>
-
-        <!-- Confirm button -->
         <form action="confirmAppointment.php" method="POST" style="display:inline-block;">
             <button type="submit" class="btn btn-success rounded-5 px-4 py-2 ms-2">Confirm</button>
         </form>

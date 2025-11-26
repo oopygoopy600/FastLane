@@ -1,0 +1,43 @@
+/* Container */
+.adminappointment {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.adminappointment h1 {
+    text-align: center;
+    color: #289759; /* primary color */
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+.adminappointment table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #289759;
+}
+
+/* Table header */
+.adminappointment th {
+    background-color: #289759; /* primary color */
+    color: white;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Table cells */
+.adminappointment td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #289759;
+}
+
+/* Action links */
+.adminappointment a {
+    text-decoration: none;
+    color: red; /* primary color */
+    font-weight: bold;
+}
